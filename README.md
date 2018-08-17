@@ -2,9 +2,9 @@
 
 By [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)
 
-"Gated Fusion Network for Joint Image Deblurring and Super-Resolution"[arXiv](https://arxiv.org/abs/1807.10806)
+"Gated Fusion Network for Joint Image Deblurring and Super-Resolution"[https://arxiv.org/abs/1807.10806](https://arxiv.org/abs/1807.10806)
 ***
-Version1:
+###Version1:
 1. Git clone this repository.
 ```bash
 $git clone https://github.com/jacquelinelala/GFN.git
