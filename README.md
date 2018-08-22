@@ -9,7 +9,7 @@ Version1:
 ```bash
 $git clone https://github.com/jacquelinelala/GFN.git
 ```
-2. Download the trained model from [here](http://xinyizhang.tech/files/), then move the model to "models" directory.
-3. Download the LR-GOPRO dataset form [here](http://xinyizhang.tech/files).
+2. Download the trained model GFN_4x.pth from [here](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to "models" directory.
+3. Download the LR-GOPRO dataset from [here](http://xinyizhang.tech/files).
 3. You need to modify some datasets directories in the codes depend on your downloading directory.
 
