@@ -14,4 +14,6 @@ $git clone https://github.com/jacquelinelala/GFN.git
 2. Download the trained model GFN_4x.pth from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to "models" directory.
 3. Download the test LR-GOPRO dataset from [Google Drive](https://drive.google.com/file/d/11TD3gVRtjlOobT8k9x2oXjEOx-dLtoDt/view?usp=sharing).
 3. You need to modify some datasets directories in the codes depend on your downloading directory.
+4. Run the test_GFN_x4.py with cuda, then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of Validation/Results.
+5. Calculate the PSNR & SSIM using Matlab on directory of evaluation/.
 
