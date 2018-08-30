@@ -9,7 +9,7 @@ import numpy as np
 from torchvision import transforms
 import torch
 from torch.utils.data import DataLoader
-from GFN.datasets.dataset_hf5 import DataValSet
+from datasets.dataset_hf5 import DataValSet
 import statistics
 
 # Training settings
