@@ -25,7 +25,7 @@ If you use these models in your research, please cite:
 	@conference{Zhang2018,
 		author = {Xinyi Zhang and Hang Dong and Zhe Hu and Wei-Sheng Lai and Fei Wang and Ming-Hsuan Yang},
 		title = {Gated Fusion Network for Joint Image Deblurring and Super-Resolution},
-                booktitle  = {BMVC},
+                booktitle = {BMVC},
 		year = {2018}
 	}
 
