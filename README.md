@@ -1,7 +1,7 @@
 # GFN
 
 "Gated Fusion Network for Joint Image Deblurring and Super-Resolution"([https://arxiv.org/abs/1807.10806](https://arxiv.org/abs/1807.10806))
-by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/).
+by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/) on BMVC2018.
 
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
@@ -25,7 +25,7 @@ If you use these models in your research, please cite:
 	@conference{Zhang2018,
 		author = {Xinyi Zhang and Hang Dong and Zhe Hu and Wei-Sheng Lai and Fei Wang and Ming-Hsuan Yang},
 		title = {Gated Fusion Network for Joint Image Deblurring and Super-Resolution},
-    booktitle  = {BMVC},
+                booktitle  = {BMVC},
 		year = {2018}
 	}
 
