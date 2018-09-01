@@ -1,7 +1,7 @@
 # GFN
 
 "Gated Fusion Network for Joint Image Deblurring and Super-Resolution"([https://arxiv.org/abs/1807.10806](https://arxiv.org/abs/1807.10806))
-by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/) on BMVC2018.
+by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)(oral presentation on BMVC2018).
 
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
@@ -17,6 +17,8 @@ $git clone https://github.com/jacquelinelala/GFN.git
 3. You need to modify some datasets directories in the codes depend on your downloading directory.
 4. Run the test_GFN_x4.py with cuda, then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of Validation/Results.
 5. Calculate the PSNR & SSIM using Matlab on directory of evaluation/.
+
+(The training codes will be released soon)
 
 ### Citation
 
