@@ -5,7 +5,7 @@ by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerce
 
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
-![Archi](http://xinyizhang.tech/content/images/2018/07/A1.png)
+![Archi](http://xinyizhang.tech/content/images/2018/09/gated-fusion-network.png)
 
 ## Version1:
 1. Git clone this repository.
