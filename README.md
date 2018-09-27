@@ -30,7 +30,7 @@ $cd GFN
 
 3. Run the test_GFN_x4.py with cuda on command line: 
 ```bash
-GFN/$python test_GFN_x4.py --your_downloads_directory/LR-GOPRO/Validation_4x
+GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x
 ```
 Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of Validation/Results.
 4. Calculate the PSNR & SSIM using Matlab on directory of evaluation/.
