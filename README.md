@@ -7,6 +7,7 @@
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
 ![Archi](http://xinyizhang.tech/content/images/2018/09/gated-fusion-network.png)
+![heatmap](http://xinyizhang.tech/content/images/2018/07/2-1.png)
 
 ## Dependencies
 * Python 3.6
