@@ -19,7 +19,7 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 * matlab R2017a
 
 ## How to test:
-### Test on LR-GOPRO Validation
+### Test on GOPRO Validation
 1. Git clone this repository.
 ```bash
 $git clone https://github.com/jacquelinelala/GFN.git
@@ -27,7 +27,7 @@ $cd GFN
 ```
 2. Download GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
 3. Download the trained model GFN_4x.pth from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to "models" directory.
-4. Generate the validation images: Run matlab function gopro_val_generator.m which is in the directory of GFN/h5_generator. The generated test images will be stored in the your_downloads_directory/GOPRO_Large/Validation_4x.
+4. Generate the validation images: Run matlab function gopro_val_generator.m which is in the directory of GFN/h5_generator. The generated test images will be stored in your_downloads_directory/GOPRO_Large/Validation_4x.
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large';
 >> gopro_val_generator(folder)
@@ -42,9 +42,10 @@ Then the deblurring and super-resolution images ending with GFN_4x.png are in th
 
 ### Test on your own dataset
 ## How to train
-### Train on LR-GOPRO dataset
+### Train on GOPRO dataset
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper.
-**You should accomplish the first two steps before the following steps.**
+
+**You should accomplish the first two steps in Test on GOPRO Validation before the following steps.**
 1. Generate the train hdf5 files: Run matlab function gopro_hdf5_generator.m which is in the directory of GFN/h5_generator. The generated hdf5 files are stored in the your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5.
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large';
