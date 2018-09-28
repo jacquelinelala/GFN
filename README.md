@@ -26,7 +26,7 @@ $git clone https://github.com/jacquelinelala/GFN.git
 $cd GFN
 ```
 2. Download GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
-3. Download the trained model ``GFN_4x.pth`` from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to ``GFN/models`` folder.
+3. Download the trained model ``GFN_4x.pth`` from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the ``GFN_4x.pth`` to ``GFN/models`` folder.
 4. Generate the validation images: Run matlab function ``gopro_val_generator.m`` which is in the directory of GFN/h5_generator. The generated test images will be stored in your_downloads_directory/GOPRO_Large/Validation_4x.
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large'; # You should replace the your_downloads_directory by your GOPRO_Large's directory.
