@@ -25,20 +25,31 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 $git clone https://github.com/jacquelinelala/GFN.git
 $cd GFN
 ```
-2. Download the trained model GFN_4x.pth from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to "models" directory.
-3. Download the test LR-GOPRO dataset from [Google Drive](https://drive.google.com/file/d/11TD3gVRtjlOobT8k9x2oXjEOx-dLtoDt/view?usp=sharing)(Recommended) or [Pan Baidu](https://pan.baidu.com/s/17oo5rDk4v2RUD3wzte_1aw?errno=0&errmsg=Auth%20Login%20Sucess&&bduss=&ssnerror=0&traceid=)(Optional).
-
-3. Run the test_GFN_x4.py with cuda on command line: 
+2. Download GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
+3. Download the trained model GFN_4x.pth from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the GFN_4x.pth to "models" directory.
+4. Generate the validation images: Run matlab function gopro_val_generator.m which is in the directory of GFN/h5_generator. The generated test images will be stored in the your_downloads_directory/GOPRO_Large/Validation_4x.
+```bash
+>> folder = 'your_downloads_directory/GOPRO_Large';
+>> gopro_val_generator(folder)
+```
+5. Run the test_GFN_x4.py with cuda on command line: 
 ```bash
 GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x
 ```
-Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of Validation/Results.
-4. Calculate the PSNR & SSIM using Matlab on directory of evaluation/.
+Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of GOPRO_Large/Validation/Results.
+6. Calculate the PSNR & SSIM using Matlab on directory of GFN/evaluation/.
 
 ### Test on your own dataset
 ## How to train
 ### Train on LR-GOPRO dataset
-Run the train_GFN_4x.py with cuda on command line:
+In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper.
+**You should accomplish the first two steps before the following steps.**
+1. Generate the train hdf5 files: Run matlab function gopro_hdf5_generator.m which is in the directory of GFN/h5_generator. The generated hdf5 files are stored in the your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5.
+```bash
+>> folder = 'your_downloads_directory/GOPRO_Large';
+>> gopro_hdf5_generator(folder)
+```
+2. Run the train_GFN_4x.py with cuda on command line:
 ```bash
 GFN/$python train_GFN_4x.py --dataset your_downloads_directory/LR-GOPRO/GOPRO_train256_4x_HDF5
 ```
