@@ -37,6 +37,7 @@ $cd GFN
 GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x
 ```
 Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of GOPRO_Large/Validation/Results.
+
 6. Calculate the PSNR & SSIM using Matlab on directory of GFN/evaluation/.
 
 ### Test on your own dataset
