@@ -16,7 +16,9 @@
 %       http://xinyizhang.tech/bmvc2018
 %       https://github.com/jacquelinelala/GFN
 %% deleting
-path = '/4TB/datasets/LR-GOPRO/Validation_4x/Results';
+function delete_image(folder)
+path = fullfile(folder, 'Validation_4x/Results');
+%path = fullfile(folder, 'Validation_4x/HR');
 result_dir = dir(fullfile(path, '*GFN_4x.png'));
 len = length(result_dir);
 

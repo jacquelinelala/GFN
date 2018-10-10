@@ -1,7 +1,7 @@
 % -------------------------------------------------------------------------
 %   Description:
 %       Use bicubic to upscale the input, and evaluate the results in terms
-%       of PSNR and SSIM (RGB channel)
+%       of PSNR.
 %
 %   Input:
 %       - Validation/LR_Blur : Blurry low-resolution input
@@ -11,7 +11,7 @@
 %       - Validation/Results: images using bicubic upscaling and formatting
 %       with 'Bic****.png' in Results directory
 %       - PSNR: Average PSNR
-%       - SSIM: Average SSIM
+%       
 %   Citation: 
 %       Gated Fusion Network for Joint Image Deblurring and Super-Resolution
 %       The British Machine Vision Conference(BMVC2018 oral)
@@ -26,10 +26,11 @@
 %       https://github.com/jacquelinelala/GFN
 
 %% testing
+function test_bicubic(folder)
 addpath(genpath('utils'));
-lr_blur_path = '/4TB/datasets/LR-GOPRO/Validation_4x/LR_Blur';
-hr_path = '/4TB/datasets/LR-GOPRO/Validation_4x/HR';
-results_path = '/4TB/datasets/LR-GOPRO/Validation_4x/Results';
+lr_blur_path = fullfile(folder, 'Validation_4x/LR_Blur');
+hr_path = fullfile(folder, 'Validation_4x/HR');
+results_path = fullfile(folder, 'Validation_4x/Results');
 lr_blur_dir = dir(fullfile(lr_blur_path, '*.png'));
 hr_dir = dir(fullfile(hr_path, '*.png'));
 count = length(lr_blur_dir);
@@ -45,17 +46,13 @@ for i = 1 : count
 	LR_Blur = im2double(imread(fullfile(lr_blur_dir(i).folder, lr_blur_dir(i).name)));
 	LR_Blur_Bic = imresize(LR_Blur, 4, 'bicubic');
 	imwrite(LR_Blur_Bic, fullfile(results_path, strcat(hr_dir(i).name(1:4), 'Bic.png')),'png');
-	[PSNR(i), SSIM(i), IFC(i)] = evaluate_SR(HR, LR_Blur_Bic, scale, ifc);
+	[PSNR(i), IFC(i)] = evaluate_SR(HR, LR_Blur_Bic, scale, ifc);
 end
 
 PSNR(count + 1) = mean(PSNR(:));
-SSIM(count + 1) = mean(SSIM(:));
 
 fprintf("Average PSNR is %f\n", PSNR(count + 1));
-fprintf("Average SSIM is %f\n", SSIM(count + 1));
 
-PSNR_path = fullfile('/4TB/datasets/LR-GOPRO/Validation_4x', 'PSNR-LRBlurBic_HR.txt');
-SSIM_path = fullfile('/4TB/datasets/LR-GOPRO/Validation_4x', 'SSIM-LRBlurBic_HR.txt');
+PSNR_path = fullfile(folder, 'Validation_4x', 'PSNR-LRBlurBic_HR.txt');
 save_matrix(PSNR, PSNR_path);
-save_matrix(SSIM, SSIM_path);
 

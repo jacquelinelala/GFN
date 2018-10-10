@@ -1,7 +1,7 @@
-function [PSNR, SSIM, IFC] = evaluate_SR(img_GT, img_HR, scale, compute_ifc)
+function [PSNR, IFC] = evaluate_SR(img_GT, img_HR, scale, compute_ifc)
 % -------------------------------------------------------------------------
 %   Description:
-%       Compute PSNR, SSIM and IFC for SR
+%       Compute PSNR and IFC for SR
 %       We convert RGB image to grayscale and crop boundaries for 'scale'
 %       pixels
 %
@@ -37,7 +37,7 @@ function [PSNR, SSIM, IFC] = evaluate_SR(img_GT, img_HR, scale, compute_ifc)
     
     % evaluate
     PSNR = psnr(img_GT, img_HR);
-    SSIM = ssim(img_GT, img_HR);
+    %SSIM = ssim(img_GT, img_HR);
     %SSIM = 0;
     
     % comment IFC to speed up testing
