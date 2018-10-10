@@ -12,7 +12,7 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and gains a PSNR growth from previous 27.74dB to 27.81dB.
 
 | Model | GOPRO 4x PSNR(dB) | Time(s) |
-|  :-----  |  -----  | -----  |
+|  :-----  |  :-----:  | :-----:  |
 |  SCGAN  |  22.74  | 0.66  |
 |  SRResNet[18]  |  24.40  | 0.07  |
 |  ED-DSRN[20]  |  26.44  | 0.10  |
@@ -31,7 +31,7 @@ In order to obtain a more stable training process, now we adopt a three-step tra
 
 ## How to test:
 ### Test on GOPRO Validation
-####**Test on given trained model(This model is the result of the third step with 55 epoch.)**
+#### Test on given trained model(This model is the result of the third step with 55 epoch.)
 1. Git clone this repository.
 ```bash
 $git clone https://github.com/jacquelinelala/GFN.git
@@ -55,7 +55,7 @@ Then the deblurring and super-resolution images ending with GFN_4x.png are in th
 >> folder = 'your_downloads_directory/GOPRO_Large';
 >> test_RGB(folder)
 ```
-####**Test on intermediate traing process**
+#### Test on intermediate traing process
 You should complete the first 3 steps in **Test on given trained model**. Meanwhile, you should have done some training in **Train on GOPRO dataset** and get some parts of traring pkl files. This is no need to accomplish the whole 3-step training, because it focuses on testing the intermediate training result.
 Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
