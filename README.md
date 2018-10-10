@@ -43,7 +43,7 @@ $cd GFN
 >> folder = 'your_downloads_directory/GOPRO_Large'; # You should replace the your_downloads_directory by your GOPRO_Large's directory.
 >> gopro_val_generator(folder)
 ```
-4. Download the trained model ``GFN_epoch_55.pkl`` from [http://xinyizhang.tech/files/](http://xinyizhang.tech/files/), then unzip and move the ``GFN_epoch_55.pkl`` to ``GFN/models`` folder.
+4. Download the trained model ``GFN_epoch_55.pkl`` from [here](http://xinyizhang.tech/files/GFN_epoch_55.pkl.zip), then unzip and move the ``GFN_epoch_55.pkl`` to ``GFN/models`` folder.
 
 5. Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
