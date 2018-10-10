@@ -50,6 +50,7 @@ $cd GFN
 GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x
 ```
 Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of GOPRO_Large/Validation/Results.
+
 6. Calculate the PSNR using Matlab function ``test_RGB.m`` on directory of GFN/evaluation/. The output of the average PSNR is 27.810232db. You can also use the ``test_bicubic.m`` to calculate the bicubic method.  
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large';
@@ -57,6 +58,7 @@ Then the deblurring and super-resolution images ending with GFN_4x.png are in th
 ```
 #### Test on intermediate traing process
 You should complete the first 3 steps in **Test on given trained model**. Meanwhile, you should have done some training in **Train on GOPRO dataset** and get some parts of traring pkl files. This is no need to accomplish the whole 3-step training, because it focuses on testing the intermediate training result.
+
 Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
 GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file on your models/'s.
