@@ -47,7 +47,7 @@ $cd GFN
 
 5. Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
-GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x
+GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x
 ```
 Then the deblurring and super-resolution images ending with GFN_4x.png are in the directory of GOPRO_Large/Validation/Results.
 
@@ -61,7 +61,7 @@ You should complete the first 3 steps in **Test on given trained model**. Meanwh
 
 Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
-GFN/$python test_GFN_x4.py --dataset your_downloads_directory/LR-GOPRO/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file on your models/'s.
+GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file on your models/'s.
 ```
 ## How to train
 ### Train on GOPRO dataset
@@ -74,13 +74,13 @@ You should accomplish the first two steps in **Test on GOPRO Validation** before
 ```
 2. Run the ``GFN/train_GFN_4x.py`` with cuda on command line:
 ```bash
-GFN/$python train_GFN_4x.py --dataset your_downloads_directory/LR-GOPRO/GOPRO_train256_4x_HDF5
+GFN/$python train_GFN_4x.py --dataset your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5
 ```
 #### Train from resume
 You should have done some training in **Train from scratch** and get some parts of pkl files. We use the trained model resume training.
 Run the ``GFN/train_GFN_4x.py`` with cuda on command line:
 ```bash
-GFN/$python train_GFN_4x.py --dataset your_downloads_directory/LR-GOPRO/GOPRO_train256_4x_HDF5 --resume models/1/GFN_epoch_30.pkl # Just an example of step1 epoch30.
+GFN/$python train_GFN_4x.py --dataset your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5 --resume models/1/GFN_epoch_30.pkl # Just an example of step1 epoch30.
 ```
 ## Citation
 
