@@ -10,8 +10,9 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 ![heatmap](http://xinyizhang.tech/content/images/2018/07/2-1.png)
 
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and gains a PSNR growth from previous 27.74dB to 27.81dB.
+
 | Model | GOPRO 4x PSNR(dB) | Time(s) |
-|  ---  |  ---  | ---  |
+|  :-----  |  -----  | -----  |
 |  SCGAN  |  22.74  | 0.66  |
 |  SRResNet[18]  |  24.40  | 0.07  |
 |  ED-DSRN[20]  |  26.44  | 0.10  |
