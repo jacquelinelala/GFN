@@ -32,7 +32,8 @@ In order to obtain a more stable training process, now we adopt a three-step tra
 
 ## How to test:
 ### Test on GOPRO Validation
-#### Test on given trained model(This model is the result of the third step with 55 epoch.)
+#### Test on the latest trained model
+This model is the result of the third step with 55 epoch.
 1. Git clone this repository.
 ```bash
 $git clone https://github.com/jacquelinelala/GFN.git
@@ -40,6 +41,8 @@ $cd GFN
 ```
 2. Download GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
 3. Generate the validation images: Run matlab function ``GFN/h5_generator/gopro_val_generator.m``. The generated test images will be stored in your_downloads_directory/GOPRO_Large/Validation_4x.
+
+If you don't have access to matlab, we offer the validation dataset for testing.You can download it from [Validation dataset from GoogleDrive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing) or [Validation dataset from Pan Baidu](https://pan.baidu.com/s/1vsVTLoBA8pmOz_omNLUQTw)
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large'; # You should replace the your_downloads_directory by your GOPRO_Large's directory.
 >> gopro_val_generator(folder)
@@ -76,7 +79,7 @@ Run the ``GFN/test_GFN_x4.py`` with cuda on command line:
 ```bash
 GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file in models/.
 ```
-#### Train from resume
+#### Resume training from breakpoints
 Since the training process will take 3 or 4 days, you can use the following command to resume the training process from any breakpoints.
 Run the ``GFN/train_GFN_4x.py`` with cuda on command line:
 ```bash
