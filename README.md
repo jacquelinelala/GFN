@@ -57,8 +57,6 @@ Then the deblurring and super-solving images ending with GFN_4x.png are in the d
 >> folder = 'your_downloads_directory/GOPRO_Large';
 >> test_RGB(folder)
 ```
-#### Test on intermediate results of training process
-You should complete the first 3 steps in **Test on given trained model**. Meanwhile, you should have done some training in **Train on GOPRO dataset** and get some parts of traring pkl files. This is no need to accomplish the whole 3-step training, because it focuses on testing the intermediate training result.
 
 ## How to train
 ### Train on GOPRO dataset
@@ -76,7 +74,7 @@ GFN/$python train_GFN_4x.py --dataset your_downloads_directory/GOPRO_Large/GOPRO
 3. The three step intermediate models will be respectively saved in models/1/ models/2 and models/3. You can also use the following command to test the intermediate results during the training process.
 Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
-GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file on your models/'s.
+GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file in models/.
 ```
 #### Train from resume
 Since the training process will take 3 or 4 days, you can use the following command to resume the training process from any breakpoints.
