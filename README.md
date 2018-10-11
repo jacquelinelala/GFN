@@ -19,7 +19,7 @@ In order to obtain a more stable training process, now we adopt a three-step tra
 |  [DeepDeblur](https://github.com/SeungjunNah/DeepDeblur_release) + [EDSR](https://github.com/thstkdgus35/EDSR-PyTorch)  |  25.09  | 2.70  |
 |  [EDSR](https://github.com/thstkdgus35/EDSR-PyTorch) + [DeepDeblur](https://github.com/SeungjunNah/DeepDeblur_release)  |  26.35  | 8.10  |
 |  GFN(BMVC paper)  |  27.74  | 0.07  |
-|  GFN(Ours)  |  27.81  | 0.07  |
+|  GFN(Now)  |  27.81  | 0.07  |
 
 ## Dependencies
 * Python 3.6
