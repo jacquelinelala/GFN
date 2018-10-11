@@ -42,7 +42,7 @@ $cd GFN
 2. Download GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
 3. Generate the validation images: Run matlab function ``GFN/h5_generator/gopro_val_generator.m``. The generated test images will be stored in your_downloads_directory/GOPRO_Large/Validation_4x.
 
-If you don't have access to matlab, we offer the validation dataset for testing.You can download it from [Validation dataset from GoogleDrive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing) or [Validation dataset from Pan Baidu](https://pan.baidu.com/s/1vsVTLoBA8pmOz_omNLUQTw)
+If you don't have access to matlab, we offer the validation dataset for testing.You can download it from [GoogleDrive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing) or [Pan Baidu](https://pan.baidu.com/s/1vsVTLoBA8pmOz_omNLUQTw).
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large'; # You should replace the your_downloads_directory by your GOPRO_Large's directory.
 >> gopro_val_generator(folder)
