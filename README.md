@@ -8,7 +8,7 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 
 ![Archi](http://xinyizhang.tech/content/images/2018/09/gated-fusion-network.png)
 ![heatmap](http://xinyizhang.tech/content/images/2018/07/2-1.png)
-## Inproved training process
+## Inproved the training process
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and improves PSNR from 27.74dB to 27.81dB on LR-GOPRO 4x dataset.
 
 | Model | GOPRO 4x PSNR(dB) | Time(s) |
@@ -55,7 +55,7 @@ GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Valida
 ```
 Then the deblurring and super-solving images ending with GFN_4x.png are in the directory of GOPRO_Large/Validation/Results.
 
-6. Calculate the PSNR using Matlab function ``GFN/evaluation/test_RGB.m``. The output of the average PSNR is 27.810232db. You can also use the ``GFN/evaluation/test_bicubic.m`` to calculate the bicubic method.  
+6. Calculate the PSNR using Matlab function ``GFN/evaluation/test_RGB.m``. The output of the average PSNR is 27.810232 dB. You can also use the ``GFN/evaluation/test_bicubic.m`` to calculate the bicubic method.  
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large';
 >> test_RGB(folder)
@@ -65,7 +65,7 @@ Then the deblurring and super-solving images ending with GFN_4x.png are in the d
 ### Train on LR-GOPRO dataset
 You should accomplish the first two steps in **Test on LR-GOPRO Validation** before the following steps.
 #### Train from scratch
-1. Generate the train hdf5 files of LR-GOPRO dataset: Run matlab function ``gopro_hdf5_generator.m`` which is in the directory of GFN/h5_generator. The generated hdf5 files are stored in the your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5.
+1. Generate the train hdf5 files of LR-GOPRO dataset: Run the matlab function ``gopro_hdf5_generator.m`` which is in the directory of GFN/h5_generator. The generated hdf5 files are stored in the your_downloads_directory/GOPRO_Large/GOPRO_train256_4x_HDF5.
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large';
 >> gopro_hdf5_generator(folder)
