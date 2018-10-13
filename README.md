@@ -11,7 +11,7 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 ## Inproved the training process
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and improves PSNR from 27.74dB to 27.81dB on LR-GOPRO 4x dataset.
 
-| Model | GOPRO 4x PSNR(dB) | Time(s) |
+| Model | LR-GOPRO 4x PSNR(dB) | Time(s) |
 |  :-----  |  :-----:  | :-----:  |
 |  [SCGAN](https://sites.google.com/view/xiangyuxu/deblursr_iccv17)  |  22.74  | 0.66  |
 |  [SRResNet](https://arxiv.org/abs/1609.04802)  |  24.40  | 0.07  |
@@ -28,7 +28,7 @@ In order to obtain a more stable training process, now we adopt a three-step tra
 * numpy
 * skimage
 * h5py
-* matlab R2017a
+* MATLAB
 
 ## How to test:
 ### Test on LR-GOPRO Validation
@@ -42,7 +42,7 @@ $cd GFN
 2. Download the original GOPRO_Large dataset from [Google Drive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing).
 3. Generate the validation images of LR-GOPRO dataset: Run matlab function ``GFN/h5_generator/gopro_val_generator.m``. The generated test images will be stored in your_downloads_directory/GOPRO_Large/Validation_4x.
 
-(If you don't have access to matlab, we offer the validation dataset for testing. You can download it from [GoogleDrive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing) or [Pan Baidu](https://pan.baidu.com/s/1vsVTLoBA8pmOz_omNLUQTw).)
+(If you don't have access to MATLAB, we offer a validation dataset for testing. You can download it from [GoogleDrive](https://drive.google.com/file/d/1H0PIXvJH4c40pk7ou6nAwoxuR4Qh_Sa2/view?usp=sharing) or [Pan Baidu](https://pan.baidu.com/s/1vsVTLoBA8pmOz_omNLUQTw).)
 ```bash
 >> folder = 'your_downloads_directory/GOPRO_Large'; # You should replace the your_downloads_directory by your GOPRO_Large's directory.
 >> gopro_val_generator(folder)
@@ -77,7 +77,7 @@ GFN/$python train_GFN_4x.py --dataset your_downloads_directory/GOPRO_Large/GOPRO
 3. The three step intermediate models will be respectively saved in models/1/ models/2 and models/3. You can also use the following command to test the intermediate results during the training process.
 Run the ``GFN/test_GFN_x4.py`` with cuda on command line: 
 ```bash
-GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace the pkl file in models/.
+GFN/$python test_GFN_x4.py --dataset your_downloads_directory/GOPRO_Large/Validation_4x --intermediate_process models/1/GFN_epoch_30.pkl # We give an example of step1 epoch30. You can replace another pkl file in models/.
 ```
 #### Resume training from breakpoints
 Since the training process will take 3 or 4 days, you can use the following command to resume the training process from any breakpoints.
