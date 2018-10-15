@@ -8,7 +8,7 @@ There are more details you can find on [Project Website : http://xinyizhang.tech
 
 ![Archi](http://xinyizhang.tech/content/images/2018/09/gated-fusion-network.png)
 ![heatmap](http://xinyizhang.tech/content/images/2018/07/2-1.png)
-## Inproved the training process
+## Improve the training process
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and improves PSNR from 27.74dB to 27.81dB on LR-GOPRO 4x dataset.
 
 | Model | LR-GOPRO 4x PSNR(dB) | Time(s) |
