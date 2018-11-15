@@ -149,3 +149,5 @@ for i in range(opt.start_training_step, 4):
             trainloader = DataLoader(dataset=train_set, batch_size=opt.batchSize, shuffle=True, num_workers=1)
             train(trainloader, model, criterion, optimizer, epoch)
         checkpoint(i, epoch)
+    # Finish an epoch and reset start_epoch
+    opt.start_epoch = 1
