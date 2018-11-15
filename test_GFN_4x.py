@@ -23,7 +23,7 @@ import statistics
 import matplotlib.pyplot as plot
 import re
 
-parser = argparse.ArgumentParser(description="PyTorch LapSRN Test")
+parser = argparse.ArgumentParser(description="PyTorch GFN Test")
 parser.add_argument("--scale", default=4, type=int, help="scale factor, Default: 4")
 parser.add_argument("--gated", type=bool, default=True, help="Activated gate module")
 parser.add_argument("--isTest", type=bool, default=True, help="Test or not")
