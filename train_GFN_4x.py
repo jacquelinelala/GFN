@@ -21,7 +21,7 @@ import random
 import re
 
 # Training settings
-parser = argparse.ArgumentParser(description="PyTorch Train")
+parser = argparse.ArgumentParser(description="PyTorch GFN Train")
 parser.add_argument("--batchSize", type=int, default=16, help="Training batch size")
 parser.add_argument("--start_training_step", type=int, default=1, help="Training step")
 parser.add_argument("--nEpochs", type=int, default=60, help="Number of epochs to train")
