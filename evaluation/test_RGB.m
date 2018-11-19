@@ -1,5 +1,5 @@
 %   Description:
-%   -testting RGB channels PSNR.
+%   -testting RGB channels PSNR and SSIM.
 %
 %   Input:    
 %   - Validation/Results: some specific group images with limited endings.
@@ -31,6 +31,7 @@ result_dir = dir(fullfile(results_path, '*GFN_4x.png'));
 hr_dir = dir(fullfile(hr_path, '*.png'));
 count = length(hr_dir);
 PSNR = zeros(count, 1);
+SSIM = zeros(count, 1);
 IFC = zeros(count, 1);
 ifc = 0;
 scale = 4;
@@ -39,11 +40,15 @@ for i = 1 : count
     fprintf("Calculating %s\n", hr_dir(i).name);
 	HR = imread(fullfile(hr_dir(i).folder, hr_dir(i).name));
 	Results = imread(fullfile(result_dir(i).folder, result_dir(i).name));
-	[PSNR(i), IFC(i)] = evaluate_SR(HR, Results, scale, ifc);
+	[PSNR(i), SSIM(i), IFC(i)] = evaluate_SR(HR, Results, scale, ifc);
 end
 
 PSNR(count + 1) = mean(PSNR(:));
+SSIM(count + 1) = mean(SSIM(:));
 fprintf("Average PSNR is %f\n", PSNR(count + 1));
+fprintf("Average SSIM is %f\n", SSIM(count + 1));
 PSNR_path = fullfile(folder, 'Validation_4x', 'PSNR-GFN_4x_HR.txt');
+SSIM_path = fullfile(folder, 'Validation_4x', 'SSIM-GFN_4x_HR.txt');
 save_matrix(PSNR, PSNR_path);
+save_matrix(SSIM, SSIM_path);
 
