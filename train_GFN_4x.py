@@ -61,7 +61,7 @@ def is_hdf5_file(filename):
 def which_trainingstep_epoch(resume):
     trainingstep = "".join(re.findall(r"\d", resume)[0])
     start_epoch = "".join(re.findall(r"\d", resume)[1:])
-    return int(trainingstep), int(start_epoch)
+    return int(trainingstep), int(start_epoch) + 1
 
 def adjust_learning_rate(epoch):
         lr = opt.lr * (opt.lr_decay ** (epoch // opt.step))
