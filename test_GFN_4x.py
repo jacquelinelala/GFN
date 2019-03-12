@@ -29,7 +29,7 @@ parser.add_argument("--gated", type=bool, default=True, help="Activated gate mod
 parser.add_argument("--isTest", type=bool, default=True, help="Test or not")
 parser.add_argument('--dataset', required=True, help='Path of the validation dataset')
 parser.add_argument("--intermediate_process", default="", type=str, help="Test on intermediate pkl (default: none)")
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 test_set=[
