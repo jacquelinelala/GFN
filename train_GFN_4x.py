@@ -35,7 +35,7 @@ parser.add_argument("--lambda_db", type=float, default=0.5, help="Weight of debl
 parser.add_argument("--gated", type=bool, default=False, help="Activated gate module")
 parser.add_argument("--isTest", type=bool, default=False, help="Test or not")
 parser.add_argument('--dataset', required=True, help='Path of the training dataset(.h5)')
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 training_settings=[
