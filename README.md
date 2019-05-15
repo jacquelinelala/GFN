@@ -7,7 +7,8 @@
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
 ![Archi](http://xinyizhang.tech/content/images/2019/03/archi.jpg)
-![heatmap](http://xinyizhang.tech/content/images/2018/07/2-1.png)
+![heatmap](http://xinyizhang.tech/content/images/2019/02/feature.jpg)
+
 ## Improve the training process
 In order to obtain a more stable training process, now we adopt a three-step training strategy, which differs from our paper and improves PSNR from 27.74dB to 27.81dB on LR-GOPRO 4x dataset.
 
