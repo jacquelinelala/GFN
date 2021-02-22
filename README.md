@@ -2,7 +2,9 @@
 
 **"Gated Fusion Network for Joint Image Deblurring and Super-Resolution"** by [Xinyi Zhang](http://xinyizhang.tech), Hang Dong, [Zhe Hu](http://eng.ucmerced.edu/people/zhu), [Wei-Sheng Lai](http://graduatestudents.ucmerced.edu/wlai24/), Fei Wang, [Ming-Hsuan Yang](http://faculty.ucmerced.edu/mhyang/)**(oral presentation on BMVC2018)**.
 
-[[arXiv](https://arxiv.org/abs/1807.10806)][[Slide](http://xinyizhang.tech/files/BMVC_slides.ppt.zip)][[Supplementary materials](http://xinyizhang.tech/files/supplement_bmvc2018.zip)]
+* [arXiv](https://arxiv.org/abs/1807.10806)
+* [Slide](http://xinyizhang.tech/files/BMVC_slides.ppt.zip)
+* [Supplementary materials](http://xinyizhang.tech/files/supplement_bmvc2018.zip)
 
 There are more details you can find on [Project Website : http://xinyizhang.tech/bmvc2018](http://xinyizhang.tech/bmvc2018/).
 
